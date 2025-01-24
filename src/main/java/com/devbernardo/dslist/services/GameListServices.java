@@ -29,7 +29,6 @@ public class GameListServices {
 
     @Transactional
     public void move(Long listedID, int sourceIndex, int destinationIndex) {
-        // Busca a lista de jogos por listId
         List<GameMinProjection> list = gameRepository.searchByList(listedID);
 
         // Valida os índices para garantir que estão no intervalo correto
