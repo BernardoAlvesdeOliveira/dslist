@@ -5,18 +5,20 @@ RUN apt-get update && apt-get install -y maven
 # Diretório de trabalho no container
 WORKDIR /app
 
-# Copiar apenas os arquivos importantes para o build
+# Copiar o arquivo pom.xml e mvnw (ou mvnw.cmd) para o container
 COPY pom.xml .
+COPY mvnw.cmd .
+COPY .mvn/ .mvn/
 COPY src ./src
 
 # Garantir que o script Maven Wrapper seja executável
-RUN chmod +x ./mvnw
+RUN chmod +x ./mvnw.cmd
 
 # Baixar dependências Maven antes do build para melhorar o cache
-RUN mvn dependency:resolve
+RUN ./mvnw.cmd dependency:resolve
 
 # Rodar o build do projeto
-RUN mvn clean install -DskipTests
+RUN ./mvnw.cmd clean install -DskipTests
 
 # Etapa final com uma imagem mais leve
 FROM openjdk:17-jdk-slim
