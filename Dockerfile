@@ -5,11 +5,13 @@ RUN apt-get update && apt-get install -y maven
 # Diretório de trabalho no container
 WORKDIR /app
 
-# Copiar o arquivo pom.xml e mvnw (ou mvnw.cmd) para o container
+# Copiar o Maven Wrapper e sua configuração
+COPY .mvn/wrapper/ .mvn/wrapper/
+COPY mvnw mvnw
+COPY mvnw.cmd mvnw.cmd
 COPY pom.xml .
-COPY mvnw.cmd .
-COPY .mvn/ .mvn/
 COPY src ./src
+
 
 # Garantir que o script Maven Wrapper seja executável
 RUN chmod +x ./mvnw.cmd
