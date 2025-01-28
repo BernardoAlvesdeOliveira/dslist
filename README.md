@@ -10,6 +10,7 @@ Este projeto está licenciado sob a licença **MIT**. Para mais informações, c
 - **Java**
 - **Spring Boot**
 - **Dockerfile**
+- **PostegresSQL**
 
 ## Como Instalar e Configurar o Projeto
 
