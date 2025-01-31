@@ -80,6 +80,3 @@ Por se tratar apenas de um backend, será necessário utilizar um software de de
 
 ### Professor que ensinou a desenvolver o projeto:
 [Devsuperior](https://github.com/devsuperior)
-
-### Programador que criou o projeto original:
-[Wesley Mazoni](https://github.com/wmazoni)
