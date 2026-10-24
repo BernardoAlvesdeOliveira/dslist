@@ -1,82 +1,82 @@
-# Sistema de Lista de Jogos
+# Game List System
 
-## Descrição do Projeto
-Este projeto é apenas o backend de um sistema que gerencia e armazena jogos em um formato de lista dentro de um banco de dados SQL. Ele permite alterar a posição de um jogo específico, como, por exemplo, movê-lo do primeiro lugar para o terceiro.
+## Project Description
+This project is the backend of a system that manages and stores games in list format within an SQL database. It allows changing the position of a specific game, for example, moving it from first place to third place.
 
-## Licença
-Este projeto está licenciado sob a licença **MIT**. Para mais informações, consulte o arquivo `LICENSE`.
+## License
+This project is licensed under the **MIT** license. For more information, see the `LICENSE` file.
 
-## Tecnologias Utilizadas e Frameworks
+## Technologies and Frameworks
 - **Java**
 - **Spring Boot**
 - **Dockerfile**
-- **PostegresSQL**
+- **PostgreSQL**
 
-## Como Instalar e Configurar o Projeto
+## How to Install and Configure the Project
 
-1. **Clone o repositório do projeto** para a sua máquina:
+1. **Clone the project repository** to your machine:
 
     ```bash
-    git clone <URL_DO_REPOSITÓRIO>
+    git clone <REPOSITORY_URL>
     ```
 
-2. **Baixe o framework Spring Boot** em sua máquina.
+2. **Install Spring Boot dependencies** on your machine.
 
-3. **Execute o projeto** seguindo os passos abaixo, de acordo com o seu sistema operacional:
+3. **Run the project** by following the steps below according to your operating system:
 
-### Para Windows:
-- Abra o terminal e navegue até a pasta onde está o arquivo `mvnw.cmd`.
-- Execute o seguinte comando:
+### For Windows:
+- Open the terminal and navigate to the folder containing the `mvnw.cmd` file.
+- Run the following command:
 
     ```bash
     mvnw.cmd spring-boot:run
     ```
-- O sistema estará rodando no endereço: `http://localhost:8080`.
+- The system will run at: `http://localhost:8080`.
 
-### Para Linux/Mac:
-- Abra o terminal e navegue até a pasta onde está o arquivo `mvnw`.
-- Execute o seguinte comando:
+### For Linux/Mac:
+- Open the terminal and navigate to the folder containing the `mvnw` file.
+- Run the following command:
 
     ```bash
-    ./mvn spring-boot:run
+    ./mvnw spring-boot:run
     ```
-- O sistema estará rodando no endereço: `http://localhost:8080`.
+- The system will run at: `http://localhost:8080`.
 
 ---
 
-## Como Usar o Projeto
+## How to Use the Project
 
-Por se tratar apenas de um backend, será necessário utilizar um software de desenvolvimento e teste de APIs, como o **Postman**.  
+Since this is only a backend application, you will need API development and testing software such as **Postman**.
 
-### Comandos disponíveis:
+### Available Commands:
 
-#### **GET** (para consultar informações do banco de dados):
-- Listar todos os jogos:
+#### **GET** (to query database information):
+- List all games:
     ```
     http://localhost:8080/games
     ```
-- Consultar um jogo específico pelo ID (ID da tabela `TB_GAME`):
+- Get a specific game by ID (ID from the `TB_GAME` table):
     ```
     http://localhost:8080/games/{id}
     ```
-- Listar todas as listas:
+- List all lists:
     ```
     http://localhost:8080/lists
     ```
-- Listar os jogos dentro de uma lista específica:
+- List games within a specific list:
     ```
     http://localhost:8080/list/{id}/games
     ```
 
-#### **POST** (para alterar a posição de um jogo em uma lista):
-- Substituir a posição de um jogo específico:
+#### **POST** (to change a game's position in a list):
+- Replace the position of a specific game:
     ```
     http://localhost:8080/lists/{id}/replacement
     ```
 
 ---
 
-## Créditos
+## Credits
 
-### Professor que ensinou a desenvolver o projeto:
+### Instructor who taught how to build this project:
 [Devsuperior](https://github.com/devsuperior)
